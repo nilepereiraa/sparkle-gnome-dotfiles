@@ -1,0 +1,96 @@
+/* =========================================================
+   macOS-style window buttons for Vivaldi (PNG-based)
+   ========================================================= */
+
+/* Position buttons top-left like macOS */
+#browser.linux .window-buttongroup {
+  margin-left: 12px;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+}
+
+/* Base button styling (colored circles) */
+#browser.linux .window-buttongroup button {
+  width: 12px;
+  height: 12px;
+  margin-right: 8px;
+
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  position: relative;
+  border-radius: 50%;
+}
+
+/* Hide Vivaldi’s default SVG icons */
+#browser.linux .window-buttongroup svg {
+  display: none;
+}
+
+/* =========================================================
+   Symbol overlay layer (hidden by default)
+   ========================================================= */
+
+#browser.linux .window-buttongroup button::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  opacity: 0;
+  transition: opacity 0.15s ease;
+  pointer-events: none;
+}
+
+/* =========================================================
+   Button images (PLACEHOLDERS)
+   ========================================================= */
+
+/* Close (red) */
+#browser.linux .window-close {
+  background-image: url("/home/nilepereiraa/WhiteSur-gtk-theme/src/assets/gtk/windows-assets/titlebutton/titlebutton-close@2.png");
+}
+
+#browser.linux .window-close::after {
+  background-image: url("/home/nilepereiraa/WhiteSur-gtk-theme/src/assets/gtk/windows-assets/titlebutton/titlebutton-close-hover@2.png");
+}
+
+/* Minimize (yellow) */
+#browser.linux .window-minimize {
+  background-image: url("/home/nilepereiraa/WhiteSur-gtk-theme/src/assets/gtk/windows-assets/titlebutton/titlebutton-minimize@2.png");
+}
+
+#browser.linux .window-minimize::after {
+  background-image: url("/home/nilepereiraa/WhiteSur-gtk-theme/src/assets/gtk/windows-assets/titlebutton/titlebutton-minimize-hover@2.png");
+}
+
+/* Maximize (green) */
+#browser.linux .window-maximize {
+  background-image: url("/home/nilepereiraa/WhiteSur-gtk-theme/src/assets/gtk/windows-assets/titlebutton/titlebutton-maximize@2.png");
+}
+
+#browser.linux .window-maximize::after {
+  background-image: url("/home/nilepereiraa/WhiteSur-gtk-theme/src/assets/gtk/windows-assets/titlebutton/titlebutton-maximize-hover@2.png");
+}
+
+/* =========================================================
+   Hover behavior (macOS-style reveal)
+   ========================================================= */
+
+#browser.linux .window-buttongroup:hover button::after {
+  opacity: 1;
+}
+
+/* =========================================================
+   Click feedback (optional but cute)
+   ========================================================= */
+
+#browser.linux .window-buttongroup button:active {
+  transform: scale(0.9);
+}
+

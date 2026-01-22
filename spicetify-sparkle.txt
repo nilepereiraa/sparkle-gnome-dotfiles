@@ -1,0 +1,14 @@
+[Sparklify]
+accent=d92040
+accent-active=d92040
+accent-inactive=49353a
+banner=d92040
+border-active=14D0F5
+border-inactive=d92040
+header=d92040
+highlight=1a1a1a
+main=3b2a2e
+notification=4687d6
+notification-error=e22134
+subtext=b3b3b3
+text=FFFFFF
